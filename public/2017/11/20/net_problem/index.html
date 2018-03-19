@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+
+
+  <html class="light page-post">
+
+
+<head>
+  <meta charset="utf-8">
+  
+  <title>HeWei</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+    <meta name="keywords" content="forsigner,前端,设计,Hexo主题,前端开发,用户体验,设计,frontend,design,nodejs,JavaScript" />
+  
+
+  <meta name="description" content="title: 无线连接问题date: 2017-12-08 21:26:50 tags: jottings1.29 网页无法打开在这里就不得不吐槽一下了，从一月初发现自己笔记本域名解析出现问题，具体表现为：网页无法打开，但是qq等应用程序可以正常使用；怀疑是本地域名服务器出现了问题，按这个思路找了很多解决办法未果。之后">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HeWei">
+<meta property="og:url" content="http://yoursite.com/2017/11/20/net_problem/index.html">
+<meta property="og:site_name" content="HeWei">
+<meta property="og:description" content="title: 无线连接问题date: 2017-12-08 21:26:50 tags: jottings1.29 网页无法打开在这里就不得不吐槽一下了，从一月初发现自己笔记本域名解析出现问题，具体表现为：网页无法打开，但是qq等应用程序可以正常使用；怀疑是本地域名服务器出现了问题，按这个思路找了很多解决办法未果。之后又发现连接校园网的时候出现这个问题，但是连接手机热点却能正常访问网页，于是怀疑">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-03-18T14:15:35.318Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="HeWei">
+<meta name="twitter:description" content="title: 无线连接问题date: 2017-12-08 21:26:50 tags: jottings1.29 网页无法打开在这里就不得不吐槽一下了，从一月初发现自己笔记本域名解析出现问题，具体表现为：网页无法打开，但是qq等应用程序可以正常使用；怀疑是本地域名服务器出现了问题，按这个思路找了很多解决办法未果。之后又发现连接校园网的时候出现这个问题，但是连接手机热点却能正常访问网页，于是怀疑">
+
+  
+
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <link href="/css/styles.css?v=c114cbe6" rel="stylesheet">
+
+
+  
+    <link rel="stylesheet" href="/css/personal-style.css">
+  
+
+  
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?57e94d016e201fba3603a8a2b0263af0";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+  
+  <script type="text/javascript">
+	(function(){
+	    var bp = document.createElement('script');
+	    var curProtocol = window.location.protocol.split(':')[0];
+	    if (curProtocol === 'https') {
+	        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+	    }
+	    else {
+	        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+	    }
+	    var s = document.getElementsByTagName("script")[0];
+	    s.parentNode.insertBefore(bp, s);
+	})();
+  </script>
+
+
+
+  
+    <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  
+</head>
+
+<body>
+
+
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">盒子</span>
+  
+
+  <div class="post-header CENTER">
+   
+  <div class="toolbox">
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">盒子</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/archives/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            博客
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/category/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            分类
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/tag/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            标签
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/link/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            友链
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/about/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            关于
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/atom.xml"
+            rel="noopener noreferrer"
+            target="_blank"
+            >
+            RSS
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/search/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+</div>
+
+
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#tags-jottings"><span class="toc-text">tags: jottings</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-29-网页无法打开"><span class="toc-text">1.29 网页无法打开</span></a></li></ol></li></ol></li></ol>
+  </div>
+
+
+
+<div class="content content-post CENTER">
+   <article id="post-net_problem" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">(no title)</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-calendar"></i>
+        <span>2017.11.20</span>
+      </span>
+
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>HeWei-imagineer</span>
+        </span>
+      
+
+      
+
+
+      
+        <span>
+          <i class="icon-comment"></i>
+          <a href="http://www.HeWei-imagineer.github.io/2017/11/20/net_problem/#disqus_thread"></a>
+        </span>
+      
+
+      
+      <i class="fa fa-eye"></i> 
+        <span id="busuanzi_container_page_pv">
+           &nbsp热度 <span id="busuanzi_value_page_pv">
+           <i class="fa fa-spinner fa-spin"></i></span>℃
+        </span>
+      
+      
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+      <hr>
+<p>title: 无线连接问题<br>date: 2017-12-08 21:26:50</p>
+<h2 id="tags-jottings"><a href="#tags-jottings" class="headerlink" title="tags: jottings"></a>tags: jottings</h2><h4 id="1-29-网页无法打开"><a href="#1-29-网页无法打开" class="headerlink" title="1.29 网页无法打开"></a>1.29 网页无法打开</h4><p>在这里就不得不吐槽一下了，从一月初发现自己笔记本域名解析出现问题，具体表现为：网页无法打开，但是qq等应用程序可以正常使用；怀疑是本地域名服务器出现了问题，按这个思路找了很多解决办法未果。之后又发现连接校园网的时候出现这个问题，但是连接手机热点却能正常访问网页，于是怀疑是校园网的原因。尝试多种解决办法无果后，借着自己手机流量多(就是懒)，便把问题搁置了。1.19回家之后就开始练车，到今天再次用电脑时，发现连家里的WiFi还是有同样问题。最后，这条命令：<br><strong>netsh winsock reset</strong><br>解决了这个磨人的问题。说是windows网络编程的接口是winsock,可能是安装软件的时候winsock的目录被修改，导致网络配置出错。即winsock与网络连接传输信息时参数被修改，导致无法发出正确请求无法获得正确响应。<br>综上：<br>问题：<br>1.笔记本无法打开网页，例如qq等的应用可以正常使用<br>2.该问题出现在笔记本链接WiFi时，当笔记本连接手机热点时问题消失<br>解决办法：<br>netsh winsock reset<br>我的看法：winsock是应用层协议，连接手机热点发出的包协议头部与连接wifi发出的包不同，当其目录被修改时导致接包方解析出错。</p>
+<p>####3.4<br>续问题，电脑再次连接校园网出现问题。网页无法打开，qq正常运行。网络诊断dns服务器未检测到。当前域名服务器为8.8.8.8，Google可正常搜索，搜索到的内容也无法打开</p>
+<p>####3.5<br>只支持有线网络上网</p>
+<p>####3.15<br>学校限制外部DNS(之前因为域名服务器有问题，自己手动改过DNS)，导致无法连接上网。改为DNS服务器自动获取后，成功连上DLUT！！！这两天一直呆实验室或者机房，靠网线上网。。。<br>解决方法：因为实验室搭网线，来了一个小哥，他帮我瞬间能弄好的，简直无敌感谢他！<br>我的诟病：<br>    1.想法里有过正确的解决方式，但是因为暂时不可达性导致错过<br>    2.有问题不及时解决，不到非不得已就一直拖着<br>    3.缺少和别人的交流，模糊了互相帮助和有偿服务的界限<br>    4.对自己和别人的评价不能恰如其分<br>总之，大部分人的价值是在被别的人需要中体现的，所以乐于去帮助别人，也学会适当的寻求别人的帮助，不是一个人单枪匹马就叫英雄，你在群体中成长会更迅速。还有，排除了一切不可能，那么唯一剩下的这个可能性就是结果。不要再在事实面前自我迷惑了。</p>
+<p>一旦出现错误，就开始怀疑自己所有工作，导致无法定位问题的源头</p>
+
+    
+  </div>
+
+  
+      <div class="git"></div>
+  
+
+</article>
+
+
+   
+  <div class="text-center donation">
+    <div class="inner-donation">
+      <span class="btn-donation">支持一下</span>
+      <div class="donation-body">
+        <div class="tip text-center">扫一扫，支持forsigner</div>
+        <ul>
+        
+          <li class="item">
+            <span>微信扫一扫</span>
+            <img src="/images/qr-wechat.png" alt="">
+          </li>
+        
+          <li class="item">
+            <span>支付宝扫一扫</span>
+            <img src="/images/qr-alipay.png" alt="">
+          </li>
+        
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+   
+  <div class="box-prev-next clearfix">
+    <a class="hide pull-left" href="/">
+        <i class="icon icon-angle-left"></i>
+    </a>
+    <a class="show pull-right" href="/2018/03/06/python-note/">
+        <i class="icon icon-angle-right"></i>
+    </a>
+  </div>
+
+
+
+
+</div>
+
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/archives/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/category/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              分类
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/tag/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              标签
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/link/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              友链
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/about/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              关于
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/atom.xml"
+              rel="noopener noreferrer"
+              target="_blank"
+              >
+              RSS
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/search/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              搜索
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+  
+      <div class="fexo-comments comments-post">
+    
+  <section class="disqus-comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+  </section>
+
+  <script>
+    var disqus_shortname = 'forsigner';
+    
+    var disqus_url = 'http://yoursite.com/2017/11/20/net_problem/';
+    
+    (function(){
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+
+  <script id="dsq-count-scr" src="//forsigner.disqus.com/count.js" async></script>
+
+
+
+    
+    
+
+    
+    
+
+    
+
+    
+    
+
+  </div>
+
+  
+
+  <script type="text/javascript">
+  function loadScript(url, callback) {
+    var script = document.createElement('script')
+    script.type = 'text/javascript';
+
+    if (script.readyState) { //IE
+      script.onreadystatechange = function() {
+        if (script.readyState == 'loaded' ||
+          script.readyState == 'complete') {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else { //Others
+      script.onload = function() {
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
+
+  window.onload = function() {
+    loadScript('/js/bundle.js?235683', function() {
+      // load success
+    });
+  }
+</script>
+
+</body>
+</html>
