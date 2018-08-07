@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>8.3 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="问题总结： 了解组件的整个生命周期，什么时候创建，什么时候接收外部的props，什么时候渲染，setState的时候如何触发render函数以及状态的异步更新。 向组件传递函数时，this不会自动绑定，原因解决方案 onClick={this.reset.bind(this)} 建立Provider, 传递参数store, 组件是如何绑定相对应的state js模块化管理，commonJS rea">
+<meta property="og:type" content="article">
+<meta property="og:title" content="8.3">
+<meta property="og:url" content="http://yoursite.com/2018/08/03/8-3/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="问题总结： 了解组件的整个生命周期，什么时候创建，什么时候接收外部的props，什么时候渲染，setState的时候如何触发render函数以及状态的异步更新。 向组件传递函数时，this不会自动绑定，原因解决方案 onClick={this.reset.bind(this)} 建立Provider, 传递参数store, 组件是如何绑定相对应的state js模块化管理，commonJS rea">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-08-04T06:32:02.155Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="8.3">
+<meta name="twitter:description" content="问题总结： 了解组件的整个生命周期，什么时候创建，什么时候接收外部的props，什么时候渲染，setState的时候如何触发render函数以及状态的异步更新。 向组件传递函数时，this不会自动绑定，原因解决方案 onClick={this.reset.bind(this)} 建立Provider, 传递参数store, 组件是如何绑定相对应的state js模块化管理，commonJS rea">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-8-3" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/08/03/8-3/" class="article-date">
+  <time datetime="2018-08-03T03:35:12.000Z" itemprop="datePublished">2018-08-03</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      8.3
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="问题总结："><a href="#问题总结：" class="headerlink" title="问题总结："></a>问题总结：</h1><ol>
+<li>了解组件的整个生命周期，什么时候创建，什么时候接收外部的props，什么时候渲染，setState的时候如何触发render函数以及状态的异步更新。</li>
+<li>向组件传递函数时，this不会自动绑定，原因解决方案 <code>onClick={this.reset.bind(this)}</code></li>
+<li>建立Provider, 传递参数store, 组件是如何绑定相对应的state</li>
+<li>js模块化管理，commonJS</li>
+<li>react路由</li>
+<li>redux中间件, subscribe具体订阅的内容</li>
+<li>异步action</li>
+<li>propTypes</li>
+<li>Windows.location</li>
+<li>ajax请求, 浏览器缓存</li>
+<li>react-redux源码</li>
+<li>对代码的管理：如何管理自己所有的代码。如果在一个项目中，想抽取自己完成的部分做一个整合，但剥离之后发现代码无法独立完成自己的功能。那我该整合的是什么？</li>
+<li>Url 改变后, 无法正常展示页面<br>解决：import React from ‘react’  !!!</li>
+<li>Redux如何整合这些状态和reducer，文件时如何被编译的</li>
+<li><p>dispatch函数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">me.props.dispatch(actions.violationBehavior(listData))；</span><br><span class="line">export const violationBehavior = (params) =&gt; dispatch =&gt; &#123;</span><br><span class="line">  fetch(API.violationBehavior,&#123;</span><br><span class="line">    method:&apos;get&apos;,</span><br><span class="line">    params:params,</span><br><span class="line">    mock: false</span><br><span class="line">  &#125;)</span><br><span class="line">  .then(result =&gt; &#123;</span><br><span class="line">    if(result.data.code == 0)&#123;</span><br><span class="line">      dispatch(&#123;</span><br><span class="line">        type: &apos;GET_VIOLATIONBEHAVIOR&apos;,</span><br><span class="line">        res: result.data.data</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>组件 this.props是指向了原想对象上的属性吗？</p>
+</li>
+<li>key</li>
+<li>ref</li>
+<li>.git hook文件</li>
+<li>JSX语法解析，插入的字符串模版何时解析。按react写法还是html写法。<br>解析后会不会再按JSX解析<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">const showLabel = (label) =&gt; &#123;</span><br><span class="line">        let result = [];</span><br><span class="line">        label.forEach( (item) =&gt; &#123;</span><br><span class="line">            result += `&lt;Button&gt;$&#123;item&#125;&lt;/Button&gt;`;</span><br><span class="line"></span><br><span class="line">        &#125;);</span><br><span class="line"></span><br><span class="line">        return result;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    const text = showLabel(label);</span><br><span class="line"></span><br><span class="line">    render() &#123;</span><br><span class="line">    const &#123; getFieldDecorator &#125; = this.props.form;</span><br><span class="line">    const formItemLayout = &#123;</span><br><span class="line">      labelCol: &#123; span: 6 &#125;,</span><br><span class="line">      wrapperCol: &#123; span: 14 &#125;,</span><br><span class="line">    &#125;;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>知识总结：</p>
+<h2 id="react"><a href="#react" class="headerlink" title="react"></a>react</h2><ol>
+<li>利用prop传递值。<component prop="{}">.   渲染的时候可以使用该值，其实就是为接收外部数据提供一个接口，传值方式：<br>Function: props.<em><br>Class: this.props.</em></component></li>
+<li>用属性的方式绑定函数</li>
+<li>变量提升，父组件存子组件状态，再把状态通过prop传给子组件；子组件可以通过父组件传来的函数改变父组件状态。把属性和操作提升到父组件，在分发给子组件</li>
+<li>变量不变性。不要直接修改变量的，用新变量替换老变量</li>
+<li>组件命名开头字母大写，props为只读，setState会触发渲染</li>
+<li>react就是创建虚拟DOM，简化渲染<br>redux</li>
+<li>Redux 维护一个store，用dispatch（state，action）触发reducer，subscride渲染组件</li>
+<li>Store不可直接修改，可以更新；reducer为纯函数</li>
+<li>和react结合时，本质就是处理好，redux的store与react组件state的关系</li>
+<li>表示组件：只负责渲染样式<br>容器组件：通过connect（mapStateToProps, DispatchToProps）函数，<br>mapStateToProps: 将store中的数据连接组件，<br>DispatchToProps: 将action做为props绑定到组件上。</li>
+</ol>
+<h2 id="redux中间件"><a href="#redux中间件" class="headerlink" title="redux中间件"></a>redux中间件</h2><ol>
+<li>用reducer初始化state</li>
+<li>当增强dispatch函数时：<br>在函数前后加一些操作，是的，每个人都能这样做，但代码毫无复用行。<br>按不同需求，封装出新的模块，包含增强操作和dispatch函数，在需要他的地方替换。<br>再想想，直接返回dispatch（），返回一个函数，就是改装了一下dispatch，换个名字，还是一样的用法<h2 id="dva"><a href="#dva" class="headerlink" title="dva"></a>dva</h2><blockquote>
+<p>组合了react + redux + saga.  Model语法，整合了action，state，reducer。加入了effect，subsctiptions。<br>组件，connect做了reat组件和redux的结合，router</p>
+</blockquote>
+</li>
+</ol>
+<h2 id="demo"><a href="#demo" class="headerlink" title="demo"></a>demo</h2><ol>
+<li>同源策略（浏览器安全的基石）：协议相同，域名相同，端口相同.<br>非同源下的行为限制：cookie，localstorage，indexDB无法读取；DOM无法获得；AJAX请求无法发送<br>解决方案：<br>AJAX：请求只发给同源网址。打破限制：<br>JSONP: 在网页动态插入js脚本（异步加载，防阻塞），src：放置请求，利用src跨域请求。服务器收到请求后把数据放在回调函数的参数位置。只能是get请求<br>WebSocket: 使用ws://, was://协议，通过对origin字段的判断，决定是否允许该请求执行。</li>
+</ol>
+<h2 id="git"><a href="#git" class="headerlink" title="git"></a>git</h2><ol>
+<li>Clone<br>git clone git://example.com/path/to/repo.git/</li>
+<li>Remote<br>Git remote -v 查看网址<pre><code>show 查看详细信息
+</code></pre></li>
+<li>git fetch<br>取回更新</li>
+<li>git pull = git fetch + git merge.<br>Git pull origin  next:master 从远程主机 的next分支和本地的master分支合并<br>建立追踪，git branch —set-upstream master origin/next  本地master 分支追踪远程主机origin分支next，建立追踪后可直接。git pull origin</li>
+</ol>
+<p>Git pull/push origin &lt;源&gt;&lt;目的地&gt;/&lt;目的地&gt;&lt;源&gt;</p>
+<ol start="5">
+<li>git push<br>所以：切分支，合并，推送<br>Push之前先pull</li>
+</ol>
+<h2 id="日常"><a href="#日常" class="headerlink" title="日常"></a>日常</h2><ol>
+<li>解构赋值： 对象解构赋值<br>let { foo: bar } = { foo: “aaa”, bar: “bbb” };<br>foo是匹配模式，bar是变量, 结果是：变量bar的值为：‘aaa’</li>
+<li><p>dva中分页插件的使用： </p>
+<blockquote>
+<p>component/user.js ：通过mapStateToProps将插件绑定到组件上，流到组件里。<br>index.js: 使用插件，import插件，添加 app.model(require(‘./models/users’));<br><code>https://github.com/sorrycc/blog/issues/18</code></p>
+</blockquote>
+</li>
+<li><p>mac下sublime快捷键：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Ctrl+Shift+K:删除整行</span><br><span class="line">Ctrl+command+g：选中所有相同文本</span><br><span class="line">Ctrl+D: 选中相同内容； Ctrl+U: 回退选中的内容</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>clect loaderble<br>周会分享：</p>
+<p>过程，故事化，不要多，一个点就好。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/08/03/8-3/" data-id="cjkhq1fp00002otu2h5ki20nh" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2018/08/03/solution/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          solution
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/08/02/8-2/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">8.2</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/08/03/solution/">solution</a>
+          </li>
+        
+          <li>
+            <a href="/2018/08/03/8-3/">8.3</a>
+          </li>
+        
+          <li>
+            <a href="/2018/08/02/8-2/">8.2</a>
+          </li>
+        
+          <li>
+            <a href="/2018/08/01/8-1/">8.1</a>
+          </li>
+        
+          <li>
+            <a href="/2018/07/29/dva/">dva</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

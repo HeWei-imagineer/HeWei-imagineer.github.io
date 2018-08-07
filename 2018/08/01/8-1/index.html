@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>8.1 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="js 函数柯里化call apply bindapply: function.call(thisArg, [arg1, arg2, …]) 传数组参数call: function.call(thisArg, arg1, arg2, …)    传单个参数bind: function.call(thisArg, arg1, arg2, …)    不改变原函数，返回一个新函数 let curring">
+<meta property="og:type" content="article">
+<meta property="og:title" content="8.1">
+<meta property="og:url" content="http://yoursite.com/2018/08/01/8-1/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="js 函数柯里化call apply bindapply: function.call(thisArg, [arg1, arg2, …]) 传数组参数call: function.call(thisArg, arg1, arg2, …)    传单个参数bind: function.call(thisArg, arg1, arg2, …)    不改变原函数，返回一个新函数 let curring">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-08-02T06:59:04.420Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="8.1">
+<meta name="twitter:description" content="js 函数柯里化call apply bindapply: function.call(thisArg, [arg1, arg2, …]) 传数组参数call: function.call(thisArg, arg1, arg2, …)    传单个参数bind: function.call(thisArg, arg1, arg2, …)    不改变原函数，返回一个新函数 let curring">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-8-1" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/08/01/8-1/" class="article-date">
+  <time datetime="2018-08-01T04:21:16.000Z" itemprop="datePublished">2018-08-01</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      8.1
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="js-函数柯里化"><a href="#js-函数柯里化" class="headerlink" title="js 函数柯里化"></a>js 函数柯里化</h1><p>call apply bind<br>apply: function.call(thisArg, [arg1, arg2, …]) 传数组参数<br>call: function.call(thisArg, arg1, arg2, …)    传单个参数<br>bind: function.call(thisArg, arg1, arg2, …)    不改变原函数，返回一个新函数</p>
+<p>let curring = function f(a) {<br>                return f1 (b) {<br>                    return f2 (c) {<br>                        return f3 (d)<br>                    }<br>                }<br>            }<br>so I can use this by this way:</p>
+<p>let B = curring(a)<br>let C = B(b)<br>let D = C(c)<br>let result = D(d)<br>就像是函数装饰器一样，为一个简单的函数增加了很多处理。也可以用箭头函数表示：<br>    let add = a =&gt; b =&gt; a + b<br>    var add3 = add(3)<br>    add3(4) === 3 + 4 //true</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/08/01/8-1/" data-id="cjkhq1fox0001otu2mto7frqi" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2018/08/02/8-2/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          8.2
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/07/29/dva/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">dva</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/08/03/solution/">solution</a>
+          </li>
+        
+          <li>
+            <a href="/2018/08/03/8-3/">8.3</a>
+          </li>
+        
+          <li>
+            <a href="/2018/08/02/8-2/">8.2</a>
+          </li>
+        
+          <li>
+            <a href="/2018/08/01/8-1/">8.1</a>
+          </li>
+        
+          <li>
+            <a href="/2018/07/29/dva/">dva</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
