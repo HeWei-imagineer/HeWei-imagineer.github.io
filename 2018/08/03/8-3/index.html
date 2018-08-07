@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="hw">
 <meta property="og:description" content="问题总结： 了解组件的整个生命周期，什么时候创建，什么时候接收外部的props，什么时候渲染，setState的时候如何触发render函数以及状态的异步更新。 向组件传递函数时，this不会自动绑定，原因解决方案 onClick={this.reset.bind(this)} 建立Provider, 传递参数store, 组件是如何绑定相对应的state js模块化管理，commonJS rea">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-08-04T06:32:02.155Z">
+<meta property="og:updated_time" content="2018-08-07T10:43:23.408Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="8.3">
 <meta name="twitter:description" content="问题总结： 了解组件的整个生命周期，什么时候创建，什么时候接收外部的props，什么时候渲染，setState的时候如何触发render函数以及状态的异步更新。 向组件传递函数时，this不会自动绑定，原因解决方案 onClick={this.reset.bind(this)} 建立Provider, 传递参数store, 组件是如何绑定相对应的state js模块化管理，commonJS rea">
@@ -47,7 +47,7 @@
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
-			<img src="/source/img/avatar.jpg" class="js-avatar">
+			<img src="/img/avatar.jpg" class="js-avatar">
 		</a>
 		<hgroup>
 		  <h1 class="header-author"><a href="/">hw</a></h1>
@@ -72,8 +72,6 @@
     			
             
     			
-    			<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">友链</a>
-    			
             
     			
     			<a q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)">关于我</a>
@@ -83,7 +81,7 @@
 		<nav class="header-nav">
 			<div class="social">
 				
-					<a class="github" target="_blank" href="#" title="github"><i class="icon-github"></i></a>
+					<a class="github" target="_blank" href="https://github.com/HeWei-imagineer" title="github"><i class="icon-github"></i></a>
 		        
 					<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
 		        
@@ -107,7 +105,7 @@
 	<div class="intrude-less">
 		<header id="header" class="inner">
 			<div class="profilepic">
-				<img src="/source/img/avatar.jpg" class="js-avatar">
+				<img src="/img/avatar.jpg" class="js-avatar">
 			</div>
 			<hgroup>
 			  <h1 class="header-author js-header-author">hw</h1>
@@ -126,7 +124,7 @@
 			<nav class="header-nav">
 				<div class="social">
 					
-						<a class="github" target="_blank" href="#" title="github"><i class="icon-github"></i></a>
+						<a class="github" target="_blank" href="https://github.com/HeWei-imagineer" title="github"><i class="icon-github"></i></a>
 			        
 						<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
 			        
@@ -184,20 +182,25 @@
 <li>建立Provider, 传递参数store, 组件是如何绑定相对应的state</li>
 <li>js模块化管理，commonJS</li>
 <li>react路由</li>
+</ol>
+<a id="more"></a>
+<ol start="6">
 <li>redux中间件, subscribe具体订阅的内容</li>
 <li>异步action</li>
 <li>propTypes</li>
 <li>Windows.location</li>
 <li>ajax请求, 浏览器缓存</li>
-<li>react-redux源码</li>
-<li>对代码的管理：如何管理自己所有的代码。如果在一个项目中，想抽取自己完成的部分做一个整合，但剥离之后发现代码无法独立完成自己的功能。那我该整合的是什么？</li>
+<li><p>react-redux源码</p>
+</li>
+<li><p>对代码的管理：如何管理自己所有的代码。如果在一个项目中，想抽取自己完成的部分做一个整合，但剥离之后发现代码无法独立完成自己的功能。那我该整合的是什么？</p>
+</li>
 <li>Url 改变后, 无法正常展示页面<br>解决：import React from ‘react’  !!!</li>
 <li>Redux如何整合这些状态和reducer，文件时如何被编译的</li>
-<li><p>dispatch函数</p>
+<li>dispatch函数</li>
+</ol>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">me.props.dispatch(actions.violationBehavior(listData))；</span><br><span class="line">export const violationBehavior = (params) =&gt; dispatch =&gt; &#123;</span><br><span class="line">  fetch(API.violationBehavior,&#123;</span><br><span class="line">    method:&apos;get&apos;,</span><br><span class="line">    params:params,</span><br><span class="line">    mock: false</span><br><span class="line">  &#125;)</span><br><span class="line">  .then(result =&gt; &#123;</span><br><span class="line">    if(result.data.code == 0)&#123;</span><br><span class="line">      dispatch(&#123;</span><br><span class="line">        type: &apos;GET_VIOLATIONBEHAVIOR&apos;,</span><br><span class="line">        res: result.data.data</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>组件 this.props是指向了原想对象上的属性吗？</p>
-</li>
+<ol start="16">
+<li>组件 this.props是指向了原想对象上的属性吗？</li>
 <li>key</li>
 <li>ref</li>
 <li>.git hook文件</li>
@@ -439,8 +442,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
       
     
       
-      
-      
     
       
       
@@ -452,15 +453,13 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
     
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
+      <li style="width: 50%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
       
         
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'friends')"><a href="javascript:void(0)" q-class="active:friends">友链</a></li>
-      
         
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
+      <li style="width: 50%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
       
         
     </ul>
@@ -479,6 +478,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
@@ -524,43 +527,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
 
     
-    	<section class="tools-section tools-section-friends" q-show="friends">
-  		
-        <ul class="search-ul">
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接1</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接2</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接3</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接4</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接5</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接6</a>
-            </li>
-          
-        </ul>
-  		
-    	</section>
-    
 
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">很惭愧&lt;br&gt;&lt;br&gt;只做了一点微小的工作&lt;br&gt;谢谢大家</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">大工2019届本科求职猿一枚&lt;br&gt;&lt;br&gt;在这里记录一些有趣的事情&lt;br&gt;所以，很高兴遇到你喽～</div>
   	  	
     	</section>
     
