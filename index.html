@@ -164,12 +164,10 @@
       
         <hr>
 <p>title: 无线连接问题<br>date: 2017-12-08 21:26:50</p>
-<h2 id="tags-jottings"><a href="#tags-jottings" class="headerlink" title="tags: jottings"></a>tags: jottings</h2><h4 id="1-29-网页无法打开"><a href="#1-29-网页无法打开" class="headerlink" title="1.29 网页无法打开"></a>1.29 网页无法打开</h4><p>在这里就不得不吐槽一下了，从一月初发现自己笔记本域名解析出现问题，具体表现为：网页无法打开，但是qq等应用程序可以正常使用；怀疑是本地域名服务器出现了问题，按这个思路找了很多解决办法未果。之后又发现连接校园网的时候出现这个问题，但是连接手机热点却能正常访问网页，于是怀疑是校园网的原因。尝试多种解决办法无果后，借着自己手机流量多(就是懒)，便把问题搁置了。1.19回家之后就开始练车，到今天再次用电脑时，发现连家里的WiFi还是有同样问题。最后，这条命令：<br><strong>netsh winsock reset</strong><br>解决了这个磨人的问题。说是windows网络编程的接口是winsock,可能是安装软件的时候winsock的目录被修改，导致网络配置出错。即winsock与网络连接传输信息时参数被修改，导致无法发出正确请求无法获得正确响应。<br>综上：<br>问题：<br>1.笔记本无法打开网页，例如qq等的应用可以正常使用<br>2.该问题出现在笔记本链接WiFi时，当笔记本连接手机热点时问题消失<br>解决办法：<br>netsh winsock reset<br>我的看法：winsock是应用层协议，连接手机热点发出的包协议头部与连接wifi发出的包不同，当其目录被修改时导致接包方解析出错。</p>
-<p>####3.4<br>续问题，电脑再次连接校园网出现问题。网页无法打开，qq正常运行。网络诊断dns服务器未检测到。当前域名服务器为8.8.8.8，Google可正常搜索，搜索到的内容也无法打开</p>
-<p>####3.5<br>只支持有线网络上网</p>
-<p>####3.15<br>学校限制外部DNS(之前因为域名服务器有问题，自己手动改过DNS)，导致无法连接上网。改为DNS服务器自动获取后，成功连上DLUT！！！这两天一直呆实验室或者机房，靠网线上网。。。<br>解决方法：因为实验室搭网线，来了一个小哥，他帮我瞬间能弄好的，简直无敌感谢他！<br>我的诟病：<br>    1.想法里有过正确的解决方式，但是因为暂时不可达性导致错过<br>    2.有问题不及时解决，不到非不得已就一直拖着<br>    3.缺少和别人的交流，模糊了互相帮助和有偿服务的界限<br>    4.对自己和别人的评价不能恰如其分<br>总之，大部分人的价值是在被别的人需要中体现的，所以乐于去帮助别人，也学会适当的寻求别人的帮助，不是一个人单枪匹马就叫英雄，你在群体中成长会更迅速。还有，排除了一切不可能，那么唯一剩下的这个可能性就是结果。不要再在事实面前自我迷惑了。</p>
-<p>一旦出现错误，就开始怀疑自己所有工作，导致无法定位问题的源头</p>
-
+<h2 id="tags"><a href="#tags" class="headerlink" title="tags: "></a>tags: </h2><h3 id="1-29-网页无法打开"><a href="#1-29-网页无法打开" class="headerlink" title="1.29 网页无法打开"></a>1.29 网页无法打开</h3><p>在这里就不得不吐槽一下了，从一月初发现自己笔记本域名解析出现问题，具体表现为：网页无法打开，但是qq等应用程序可以正常使用；怀疑是本地域名服务器出现了问题，按这个思路找了很多解决办法未果。之后又发现连接校园网的时候出现这个问题，但是连接手机热点却能正常访问网页，于是怀疑是校园网的原因。尝试多种解决办法无果后，借着自己手机流量多(就是懒)，便把问题搁置了。1.19回家之后就开始练车，到今天再次用电脑时，发现连家里的WiFi还是有同样问题。最后，这条命令：</p>
+        
+          <a class="article-more-a" href="/2018/08/08/net_problem/#more">more >></a>
+        
       
 
       
@@ -438,7 +436,6 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h1 id="js-函数柯里化"><a href="#js-函数柯里化" class="headerlink" title="js 函数柯里化"></a>js 函数柯里化</h1><p>call apply bind<br>apply: function.call(thisArg, [arg1, arg2, …]) 传数组参数<br>call: function.call(thisArg, arg1, arg2, …)    传单个参数<br>bind: function.call(thisArg, arg1, arg2, …)    不改变原函数，返回一个新函数</p>
-<p>let curring = function f(a) {<br>                return f1 (b) {<br>                    return f2 (c) {<br>                        return f3 (d)<br>                    }<br>                }<br>            }<br>so I can use this by this way:</p>
         
           <a class="article-more-a" href="/2018/08/01/8-1/#more">more >></a>
         
@@ -579,10 +576,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>redux: 对于数据的一种管理方式<br>如果数据来源不仅仅是与用户的交互还有网络端，各组件之间通信频繁，很多组件要访问同一个在变化的数据。这时候就应该建立起对数据统一的管理方式。<br>不再让数据随意流。每一瞬间获取的state都是唯一的，规范化地处理函数(定义action，说明如何改变数据，即说明动作)，规范化地改变状态(通过connect和dispatch，完成数据与视图的绑定还有动作的触发)，但数据如何绑定组件还是由开发者决定。<br>以下实例为点击按钮，将页面上的数字加1.<br>按照之前的步骤会这样建立程序：<br>数据处理handleData =&gt; 组件设计，页面布局,render函数的构建 =&gt; 决定在哪里setState以及从哪里拿数据。对比如下的例子：</p>
-<ol>
-<li>定义action，这是对数据处理的预说明；reducer，数据处理的方式 </li>
-</ol>
+        <p>redux: 对于数据的一种管理方式<br>如果数据来源不仅仅是与用户的交互还有网络端，各组件之间通信频繁，很多组件要访问同一个在变化的数据。这时候就应该建立起对数据统一的管理方式。</p>
         
           <a class="article-more-a" href="/2018/07/29/redux-demo/#more">more >></a>
         
@@ -647,10 +641,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>#react-demo<br>功能：在组件挂载时设置定时器，卸载时解除定时器。点击按钮刷新页面信息。</p>
-<p>react想要做的就是让dom活起来。dom随数据而变化，我想叫他变量的可视化。开发人员不再过多关注已有的dom树，从树里定位元素，插入值。现在当我想展示一件事物时，我只用关心它核心的数据，配个组件使用，就能描绘出他的全貌。以之前提及的tac-tic-toe为例。{histor: [state1, state2, state3]}, 利用这一个数据，我就可以展示棋盘状态，记录步骤。加上isNext，stepNumber就能实现交替落子，步骤回退。<br>回到react之前，实现tac-tic-toe例子时，我会先搭建html框架，js处理完数据后，再去操作dom。虽然这样看起来似乎比较清晰，但是我更喜欢react的组织方式。它更接近我自己脑海里建立起的编程思想。对于后端程序来说每一个变量都是存在电门里的电信号，而在前端，每一个变量在被处理后会有两个选择：1，经浏览器解析，变成DOM在页面显示; 2.还是变成电信号被存储起来。react的工作就是把变量转化为dom。下面是一个简单的小例子：</p>
-<p>使用mock数据<br><code>npm install mockjs</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var Mock = require(&apos;mockjs&apos;);</span><br><span class="line">var Random = Mock.Random;</span><br><span class="line">Random.sentence(3, 5)</span><br></pre></td></tr></table></figure>
+        <h1 id="react-demo"><a href="#react-demo" class="headerlink" title="react-demo"></a>react-demo</h1><p>功能：在组件挂载时设置定时器，卸载时解除定时器。点击按钮刷新页面信息。</p>
+<p>react想要做的就是让dom活起来。dom随数据而变化，我想叫他变量的可视化。开发人员不再过多关注已有的dom树，从树里定位元素，插入值。现在当我想展示一件事物时，我只用关心它核心的数据，配个组件使用，就能描绘出他的全貌。以之前提及的tac-tic-toe为例。{histor: [state1, state2, state3]}, 利用这一个数据，我就可以展示棋盘状态，记录步骤。加上isNext，stepNumber就能实现交替落子，步骤回退。</p>
         
           <a class="article-more-a" href="/2018/07/27/react-demo/#more">more >></a>
         
@@ -719,14 +711,9 @@
 <ol>
 <li>get put data in url; post: put data in https body (it can modified data)</li>
 </ol>
-<p><code>&lt;input name=&quot;&quot; placeholder=&quot;&quot; autofocus=&quot;&quot;&gt;:</code><br>‘name’ is the key of send message</p>
-<h1 id="URL编码规范"><a href="#URL编码规范" class="headerlink" title="URL编码规范"></a>URL编码规范</h1><p>转义:  ! =&gt; 21%</p>
-<h1 id="HTTP-method"><a href="#HTTP-method" class="headerlink" title="HTTP method"></a>HTTP method</h1><p>why, why is there http method</p>
-<p>I want to buid a website to record my life.<br>It more than a normal web page, but there are some interstinf part.</p>
-<ol>
-<li></li>
-</ol>
-
+        
+          <a class="article-more-a" href="/2018/06/04/note/#more">more >></a>
+        
       
 
       

@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>8.1 | hw</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="js 函数柯里化call apply bindapply: function.call(thisArg, [arg1, arg2, …]) 传数组参数call: function.call(thisArg, arg1, arg2, …)    传单个参数bind: function.call(thisArg, arg1, arg2, …)    不改变原函数，返回一个新函数 let curring">
+  <meta name="description" content="js 函数柯里化call apply bindapply: function.call(thisArg, [arg1, arg2, …]) 传数组参数call: function.call(thisArg, arg1, arg2, …)    传单个参数bind: function.call(thisArg, arg1, arg2, …)    不改变原函数，返回一个新函数">
 <meta name="keywords" content="随笔">
 <meta property="og:type" content="article">
 <meta property="og:title" content="8.1">
 <meta property="og:url" content="http://yoursite.com/2018/08/01/8-1/index.html">
 <meta property="og:site_name" content="hw">
-<meta property="og:description" content="js 函数柯里化call apply bindapply: function.call(thisArg, [arg1, arg2, …]) 传数组参数call: function.call(thisArg, arg1, arg2, …)    传单个参数bind: function.call(thisArg, arg1, arg2, …)    不改变原函数，返回一个新函数 let curring">
+<meta property="og:description" content="js 函数柯里化call apply bindapply: function.call(thisArg, [arg1, arg2, …]) 传数组参数call: function.call(thisArg, arg1, arg2, …)    传单个参数bind: function.call(thisArg, arg1, arg2, …)    不改变原函数，返回一个新函数">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-08-07T10:35:00.124Z">
+<meta property="og:updated_time" content="2018-08-08T01:47:12.684Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="8.1">
-<meta name="twitter:description" content="js 函数柯里化call apply bindapply: function.call(thisArg, [arg1, arg2, …]) 传数组参数call: function.call(thisArg, arg1, arg2, …)    传单个参数bind: function.call(thisArg, arg1, arg2, …)    不改变原函数，返回一个新函数 let curring">
+<meta name="twitter:description" content="js 函数柯里化call apply bindapply: function.call(thisArg, [arg1, arg2, …]) 传数组参数call: function.call(thisArg, arg1, arg2, …)    传单个参数bind: function.call(thisArg, arg1, arg2, …)    不改变原函数，返回一个新函数">
   
     <link rel="alternative" href="/atom.xml" title="hw" type="application/atom+xml">
   
@@ -178,8 +178,8 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h1 id="js-函数柯里化"><a href="#js-函数柯里化" class="headerlink" title="js 函数柯里化"></a>js 函数柯里化</h1><p>call apply bind<br>apply: function.call(thisArg, [arg1, arg2, …]) 传数组参数<br>call: function.call(thisArg, arg1, arg2, …)    传单个参数<br>bind: function.call(thisArg, arg1, arg2, …)    不改变原函数，返回一个新函数</p>
-<p>let curring = function f(a) {<br>                return f1 (b) {<br>                    return f2 (c) {<br>                        return f3 (d)<br>                    }<br>                }<br>            }<br>so I can use this by this way:</p>
 <a id="more"></a>
+<p>let curring = function f(a) {<br>                return f1 (b) {<br>                    return f2 (c) {<br>                        return f3 (d)<br>                    }<br>                }<br>            }<br>so I can use this by this way:</p>
 <p>let B = curring(a)<br>let C = B(b)<br>let D = C(c)<br>let result = D(d)<br>就像是函数装饰器一样，为一个简单的函数增加了很多处理。也可以用箭头函数表示：<br>    let add = a =&gt; b =&gt; a + b<br>    var add3 = add(3)<br>    add3(4) === 3 + 4 //true</p>
 
       

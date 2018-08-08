@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>3.19 | hw</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="关于递归函数问题:def move_one(num,init,des):    print(‘move ‘+str(num)+’ from ‘+init+’ to ‘+des)    print(‘———————————‘)def hanoi(num,init,temp,des):    if num==1:        move_one(num,init,des)    else:">
+  <meta name="description" content="关于递归函数问题:">
 <meta property="og:type" content="article">
 <meta property="og:title" content="3.19">
 <meta property="og:url" content="http://yoursite.com/2018/03/19/汉诺塔/index.html">
 <meta property="og:site_name" content="hw">
-<meta property="og:description" content="关于递归函数问题:def move_one(num,init,des):    print(‘move ‘+str(num)+’ from ‘+init+’ to ‘+des)    print(‘———————————‘)def hanoi(num,init,temp,des):    if num==1:        move_one(num,init,des)    else:">
+<meta property="og:description" content="关于递归函数问题:">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-08-08T00:30:23.191Z">
+<meta property="og:updated_time" content="2018-08-08T01:44:26.875Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="3.19">
-<meta name="twitter:description" content="关于递归函数问题:def move_one(num,init,des):    print(‘move ‘+str(num)+’ from ‘+init+’ to ‘+des)    print(‘———————————‘)def hanoi(num,init,temp,des):    if num==1:        move_one(num,init,des)    else:">
+<meta name="twitter:description" content="关于递归函数问题:">
   
     <link rel="alternative" href="/atom.xml" title="hw" type="application/atom+xml">
   
@@ -176,7 +176,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>关于递归函数问题:<br>def move_one(num,init,des):<br>    print(‘move ‘+str(num)+’ from ‘+init+’ to ‘+des)<br>    print(‘———————————‘)<br>def hanoi(num,init,temp,des):<br>    if num==1:<br>        move_one(num,init,des)<br>    else:<br>        hanoi(num-1,init,des,temp)<br>        move_one(num,init,des)<br>        hanoi(num-1,temp,init,des)</p>
+        <p>关于递归函数问题:</p>
+<a id="more"></a>
+<p>def move_one(num,init,des):<br>    print(‘move ‘+str(num)+’ from ‘+init+’ to ‘+des)<br>    print(‘———————————‘)<br>def hanoi(num,init,temp,des):<br>    if num==1:<br>        move_one(num,init,des)<br>    else:<br>        hanoi(num-1,init,des,temp)<br>        move_one(num,init,des)<br>        hanoi(num-1,temp,init,des)</p>
 <p>一件很难的事，我可以完成其中一小步，剩下的交给第二个人做。<br>第二个人接到任务时，想我可以完成其中一小步，剩下的交给第三个人做。…<br>直到任务最后被分解成简单的一小步。</p>
 
       
