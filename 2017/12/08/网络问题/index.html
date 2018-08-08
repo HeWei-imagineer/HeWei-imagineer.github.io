@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>3.19 | hw</title>
+  <title>网络问题 | hw</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="关于递归函数问题:">
+  <meta name="description" content="1.29 网页无法打开在这里就不得不吐槽一下了，从一月初发现自己笔记本域名解析出现问题，具体表现为：网页无法打开，但是qq等应用程序可以正常使用；怀疑是本地域名服务器出现了问题，按这个思路找了很多解决办法未果。之后又发现连接校园网的时候出现这个问题，但是连接手机热点却能正常访问网页，于是怀疑是校园网的原因。尝试多种解决办法无果后，借着自己手机流量多(就是懒)，便把问题搁置了。1.19回家之后就开始">
 <meta property="og:type" content="article">
-<meta property="og:title" content="3.19">
-<meta property="og:url" content="http://yoursite.com/2018/03/19/汉诺塔/index.html">
+<meta property="og:title" content="网络问题">
+<meta property="og:url" content="http://yoursite.com/2017/12/08/网络问题/index.html">
 <meta property="og:site_name" content="hw">
-<meta property="og:description" content="关于递归函数问题:">
+<meta property="og:description" content="1.29 网页无法打开在这里就不得不吐槽一下了，从一月初发现自己笔记本域名解析出现问题，具体表现为：网页无法打开，但是qq等应用程序可以正常使用；怀疑是本地域名服务器出现了问题，按这个思路找了很多解决办法未果。之后又发现连接校园网的时候出现这个问题，但是连接手机热点却能正常访问网页，于是怀疑是校园网的原因。尝试多种解决办法无果后，借着自己手机流量多(就是懒)，便把问题搁置了。1.19回家之后就开始">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-08-08T01:44:26.875Z">
+<meta property="og:updated_time" content="2018-08-08T01:58:54.283Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="3.19">
-<meta name="twitter:description" content="关于递归函数问题:">
+<meta name="twitter:title" content="网络问题">
+<meta name="twitter:description" content="1.29 网页无法打开在这里就不得不吐槽一下了，从一月初发现自己笔记本域名解析出现问题，具体表现为：网页无法打开，但是qq等应用程序可以正常使用；怀疑是本地域名服务器出现了问题，按这个思路找了很多解决办法未果。之后又发现连接校园网的时候出现这个问题，但是连接手机热点却能正常访问网页，于是怀疑是校园网的原因。尝试多种解决办法无果后，借着自己手机流量多(就是懒)，便把问题搁置了。1.19回家之后就开始">
   
     <link rel="alternative" href="/atom.xml" title="hw" type="application/atom+xml">
   
@@ -156,30 +156,33 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-汉诺塔" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-网络问题" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      3.19
+      网络问题
     </h1>
   
 
         
-        <a href="/2018/03/19/汉诺塔/" class="archive-article-date">
-  	<time datetime="2018-03-19T02:51:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-19</time>
+        <a href="/2017/12/08/网络问题/" class="archive-article-date">
+  	<time datetime="2017-12-08T13:26:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-08</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>关于递归函数问题:</p>
+        <h3 id="1-29-网页无法打开"><a href="#1-29-网页无法打开" class="headerlink" title="1.29 网页无法打开"></a>1.29 网页无法打开</h3><p>在这里就不得不吐槽一下了，从一月初发现自己笔记本域名解析出现问题，具体表现为：网页无法打开，但是qq等应用程序可以正常使用；怀疑是本地域名服务器出现了问题，按这个思路找了很多解决办法未果。之后又发现连接校园网的时候出现这个问题，但是连接手机热点却能正常访问网页，于是怀疑是校园网的原因。尝试多种解决办法无果后，借着自己手机流量多(就是懒)，便把问题搁置了。1.19回家之后就开始练车，到今天再次用电脑时，发现连家里的WiFi还是有同样问题。最后，这条命令：</p>
 <a id="more"></a>
-<p>def move_one(num,init,des):<br>    print(‘move ‘+str(num)+’ from ‘+init+’ to ‘+des)<br>    print(‘———————————‘)<br>def hanoi(num,init,temp,des):<br>    if num==1:<br>        move_one(num,init,des)<br>    else:<br>        hanoi(num-1,init,des,temp)<br>        move_one(num,init,des)<br>        hanoi(num-1,temp,init,des)</p>
-<p>一件很难的事，我可以完成其中一小步，剩下的交给第二个人做。<br>第二个人接到任务时，想我可以完成其中一小步，剩下的交给第三个人做。…<br>直到任务最后被分解成简单的一小步。</p>
+<p><strong>netsh winsock reset</strong><br>解决了这个磨人的问题。说是windows网络编程的接口是winsock,可能是安装软件的时候winsock的目录被修改，导致网络配置出错。即winsock与网络连接传输信息时参数被修改，导致无法发出正确请求无法获得正确响应。<br>综上：<br>问题：<br>1.笔记本无法打开网页，例如qq等的应用可以正常使用<br>2.该问题出现在笔记本链接WiFi时，当笔记本连接手机热点时问题消失<br>解决办法：<br>netsh winsock reset<br>我的看法：winsock是应用层协议，连接手机热点发出的包协议头部与连接wifi发出的包不同，当其目录被修改时导致接包方解析出错。</p>
+<h4 id="3-4"><a href="#3-4" class="headerlink" title="3.4"></a>3.4</h4><p>续问题，电脑再次连接校园网出现问题。网页无法打开，qq正常运行。网络诊断dns服务器未检测到。当前域名服务器为8.8.8.8，Google可正常搜索，搜索到的内容也无法打开</p>
+<h4 id="3-5"><a href="#3-5" class="headerlink" title="3.5"></a>3.5</h4><p>只支持有线网络上网</p>
+<h4 id="3-15"><a href="#3-15" class="headerlink" title="3.15"></a>3.15</h4><p>学校限制外部DNS(之前因为域名服务器有问题，自己手动改过DNS)，导致无法连接上网。改为DNS服务器自动获取后，成功连上DLUT！！！这两天一直呆实验室或者机房，靠网线上网。。。<br>解决方法：因为实验室搭网线，来了一个小哥，他帮我瞬间能弄好的，简直无敌感谢他！<br>我的诟病：<br>    1.想法里有过正确的解决方式，但是因为暂时不可达性导致错过<br>    2.有问题不及时解决，不到非不得已就一直拖着<br>    3.缺少和别人的交流，模糊了互相帮助和有偿服务的界限<br>    4.对自己和别人的评价不能恰如其分<br>总之，大部分人的价值是在被别的人需要中体现的，所以乐于去帮助别人，也学会适当的寻求别人的帮助，不是一个人单枪匹马就叫英雄，你在群体中成长会更迅速。还有，排除了一切不可能，那么唯一剩下的这个可能性就是结果。不要再在事实面前自我迷惑了。</p>
+<p>一旦出现错误，就开始怀疑自己所有工作，导致无法定位问题的源头</p>
 
       
 
@@ -259,7 +262,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/03/19/汉诺塔/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2017/12/08/网络问题/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -273,20 +276,15 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/03/20/note2/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2018/03/06/python-note/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          note2
+          python_note
         
       </div>
     </a>
   
-  
-    <a href="/2018/03/18/Java海量数据分布式存储/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Java海量数据分布式存储</div>
-      <i class="icon-circle-right"></i>
-    </a>
   
 </nav>
 
