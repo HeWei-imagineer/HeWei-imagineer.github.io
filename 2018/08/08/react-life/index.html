@@ -6,19 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>EnglishLearning | hw</title>
+  <title>react-life | hw</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Listening 单词：没有建立起单词和词音的联系；（听音记单词） 表达方式：不熟悉含有大量介词，代词，从句的表达方式；（系统学习语法）">
+  <meta name="description" content="react 异步请求 首先页面结构为">
 <meta property="og:type" content="article">
-<meta property="og:title" content="EnglishLearning">
-<meta property="og:url" content="http://yoursite.com/2018/05/28/EnglishLearning/index.html">
+<meta property="og:title" content="react-life">
+<meta property="og:url" content="http://yoursite.com/2018/08/08/react-life/index.html">
 <meta property="og:site_name" content="hw">
-<meta property="og:description" content="Listening 单词：没有建立起单词和词音的联系；（听音记单词） 表达方式：不熟悉含有大量介词，代词，从句的表达方式；（系统学习语法）">
+<meta property="og:description" content="react 异步请求 首先页面结构为">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-08-08T00:30:23.227Z">
+<meta property="og:image" content="http://yoursite.com/assets/filter.png">
+<meta property="og:image" content="http://yoursite.com/assets/list.png">
+<meta property="og:image" content="http://yoursite.com/assets/react_life.jpg">
+<meta property="og:updated_time" content="2018-08-08T16:43:51.700Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="EnglishLearning">
-<meta name="twitter:description" content="Listening 单词：没有建立起单词和词音的联系；（听音记单词） 表达方式：不熟悉含有大量介词，代词，从句的表达方式；（系统学习语法）">
+<meta name="twitter:title" content="react-life">
+<meta name="twitter:description" content="react 异步请求 首先页面结构为">
+<meta name="twitter:image" content="http://yoursite.com/assets/filter.png">
   
     <link rel="alternative" href="/atom.xml" title="hw" type="application/atom+xml">
   
@@ -156,30 +160,40 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-EnglishLearning" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-react-life" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      EnglishLearning
+      react-life
     </h1>
   
 
         
-        <a href="/2018/05/28/EnglishLearning/" class="archive-article-date">
-  	<time datetime="2018-05-28T00:46:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-28</time>
+        <a href="/2018/08/08/react-life/" class="archive-article-date">
+  	<time datetime="2018-08-08T15:48:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-08</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="Listening"><a href="#Listening" class="headerlink" title="Listening"></a>Listening</h2><ol>
-<li>单词：没有建立起单词和词音的联系；（听音记单词）</li>
-<li>表达方式：不熟悉含有大量介词，代词，从句的表达方式；（系统学习语法）</li>
+        <h1 id="react-异步请求"><a href="#react-异步请求" class="headerlink" title="react 异步请求"></a>react 异步请求</h1><p><img src="/assets/filter.png" width="500"><br><img src="/assets/list.png" width="500"></p>
+<p>首先页面结构为</p>
+<a id="more"></a>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">function reportState(state)&#123;</span><br><span class="line">  return &#123;</span><br><span class="line">    teamListData: state.SetTeam.toJS()</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">export default connect(reportState, actions)(BattleTeamFilter)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">function reportState(state)&#123;</span><br><span class="line">  return &#123;</span><br><span class="line">    teamListData: state.SetTeam.toJS()</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">export default connect(reportState, actions)(BattleTeamList)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">const reportState = (state) =&gt; &#123;</span><br><span class="line">  return &#123;</span><br><span class="line">    teamListData: state.SetTeam.toJS()</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">export default connect(reportState, actions)(SetTeam)</span><br></pre></td></tr></table></figure>
+<p>如上图，点击更换组长之后，需要连续发送请求，更新list内容。解决方案：</p>
+<ol>
+<li><p>点击更换组长的按钮时触发函数，将this指针传递给action，action里dispatch查询数据的函数。很hack，</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">export const delMemberByCode = (url, params, _me) =&gt; (dispatch, getState) =&gt; &#123;</span><br><span class="line">  Request(&#123;</span><br><span class="line">    url,</span><br><span class="line">    params</span><br><span class="line">  &#125;).then((data)=&gt;&#123;</span><br><span class="line">    dispatch(&#123;</span><br><span class="line">      type:&apos;setListNull_setTeam&apos;</span><br><span class="line">    &#125;)</span><br><span class="line">    let orgCode = _me.props.teamListData.orgCode</span><br><span class="line">    let currentPage = _me.props.teamListData.currentPage</span><br><span class="line">    _me.props.queryTeamList(Api.battleTeam.queryTeamList, &#123;orgCode, currentPage, pageSize: 10&#125;)</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在action里dispatch一个新的动作，更改外部state的维护值，在接受新的props时，触发componentWillReceiveProps从而再次发送新的请求，显示数据</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">var initState = &#123;</span><br><span class="line">    ...</span><br><span class="line">  _num: 0</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">case &apos;DELETE_RULECENTER_LIST_SUCCESS&apos;:</span><br><span class="line">            return state.set(&apos;_num&apos;, ++initState._num)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">componentWillReceiveProps(newprop) &#123;</span><br><span class="line">    this.setState(&#123;</span><br><span class="line">      filter: newprop.ruleData.filter</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+</li>
 </ol>
+<h1 id="react-生命周期"><a href="#react-生命周期" class="headerlink" title="react 生命周期"></a>react 生命周期</h1><p><img src="/assets/react_life.jpg" width="500"></p>
 
       
 
@@ -259,7 +273,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/05/28/EnglishLearning/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/08/08/react-life/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -273,18 +287,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/05/28/js事件机制/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          js事件机制
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/05/25/summary/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">summary</div>
+    <a href="/2018/08/03/solution/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">solution</div>
       <i class="icon-circle-right"></i>
     </a>
   
