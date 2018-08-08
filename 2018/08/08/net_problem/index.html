@@ -6,18 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | hw</title>
+  <title>hw</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="大连理工大学本科2019届，现从事web前端开发">
-<meta property="og:type" content="website">
+  <meta name="description" content="title: 无线连接问题date: 2017-12-08 21:26:50 tags: jottings1.29 网页无法打开在这里就不得不吐槽一下了，从一月初发现自己笔记本域名解析出现问题，具体表现为：网页无法打开，但是qq等应用程序可以正常使用；怀疑是本地域名服务器出现了问题，按这个思路找了很多解决办法未果。之后又发现连接校园网的时候出现这个问题，但是连接手机热点却能正常访问网页，于是怀疑">
+<meta property="og:type" content="article">
 <meta property="og:title" content="hw">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+<meta property="og:url" content="http://yoursite.com/2018/08/08/net_problem/index.html">
 <meta property="og:site_name" content="hw">
-<meta property="og:description" content="大连理工大学本科2019届，现从事web前端开发">
+<meta property="og:description" content="title: 无线连接问题date: 2017-12-08 21:26:50 tags: jottings1.29 网页无法打开在这里就不得不吐槽一下了，从一月初发现自己笔记本域名解析出现问题，具体表现为：网页无法打开，但是qq等应用程序可以正常使用；怀疑是本地域名服务器出现了问题，按这个思路找了很多解决办法未果。之后又发现连接校园网的时候出现这个问题，但是连接手机热点却能正常访问网页，于是怀疑">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-08-08T00:30:23.335Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hw">
-<meta name="twitter:description" content="大连理工大学本科2019届，现从事web前端开发">
+<meta name="twitter:description" content="title: 无线连接问题date: 2017-12-08 21:26:50 tags: jottings1.29 网页无法打开在这里就不得不吐槽一下了，从一月初发现自己笔记本域名解析出现问题，具体表现为：网页无法打开，但是qq等应用程序可以正常使用；怀疑是本地域名服务器出现了问题，按这个思路找了很多解决办法未果。之后又发现连接校园网的时候出现这个问题，但是连接手机热点却能正常访问网页，于是怀疑">
   
     <link rel="alternative" href="/atom.xml" title="hw" type="application/atom+xml">
   
@@ -155,300 +156,146 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-net_problem" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<p>title: 无线连接问题<br>date: 2017-12-08 21:26:50</p>
+<h2 id="tags-jottings"><a href="#tags-jottings" class="headerlink" title="tags: jottings"></a>tags: jottings</h2><h4 id="1-29-网页无法打开"><a href="#1-29-网页无法打开" class="headerlink" title="1.29 网页无法打开"></a>1.29 网页无法打开</h4><p>在这里就不得不吐槽一下了，从一月初发现自己笔记本域名解析出现问题，具体表现为：网页无法打开，但是qq等应用程序可以正常使用；怀疑是本地域名服务器出现了问题，按这个思路找了很多解决办法未果。之后又发现连接校园网的时候出现这个问题，但是连接手机热点却能正常访问网页，于是怀疑是校园网的原因。尝试多种解决办法无果后，借着自己手机流量多(就是懒)，便把问题搁置了。1.19回家之后就开始练车，到今天再次用电脑时，发现连家里的WiFi还是有同样问题。最后，这条命令：<br><strong>netsh winsock reset</strong><br>解决了这个磨人的问题。说是windows网络编程的接口是winsock,可能是安装软件的时候winsock的目录被修改，导致网络配置出错。即winsock与网络连接传输信息时参数被修改，导致无法发出正确请求无法获得正确响应。<br>综上：<br>问题：<br>1.笔记本无法打开网页，例如qq等的应用可以正常使用<br>2.该问题出现在笔记本链接WiFi时，当笔记本连接手机热点时问题消失<br>解决办法：<br>netsh winsock reset<br>我的看法：winsock是应用层协议，连接手机热点发出的包协议头部与连接wifi发出的包不同，当其目录被修改时导致接包方解析出错。</p>
+<p>####3.4<br>续问题，电脑再次连接校园网出现问题。网页无法打开，qq正常运行。网络诊断dns服务器未检测到。当前域名服务器为8.8.8.8，Google可正常搜索，搜索到的内容也无法打开</p>
+<p>####3.5<br>只支持有线网络上网</p>
+<p>####3.15<br>学校限制外部DNS(之前因为域名服务器有问题，自己手动改过DNS)，导致无法连接上网。改为DNS服务器自动获取后，成功连上DLUT！！！这两天一直呆实验室或者机房，靠网线上网。。。<br>解决方法：因为实验室搭网线，来了一个小哥，他帮我瞬间能弄好的，简直无敌感谢他！<br>我的诟病：<br>    1.想法里有过正确的解决方式，但是因为暂时不可达性导致错过<br>    2.有问题不及时解决，不到非不得已就一直拖着<br>    3.缺少和别人的交流，模糊了互相帮助和有偿服务的界限<br>    4.对自己和别人的评价不能恰如其分<br>总之，大部分人的价值是在被别的人需要中体现的，所以乐于去帮助别人，也学会适当的寻求别人的帮助，不是一个人单枪匹马就叫英雄，你在群体中成长会更迅速。还有，排除了一切不可能，那么唯一剩下的这个可能性就是结果。不要再在事实面前自我迷惑了。</p>
+<p>一旦出现错误，就开始怀疑自己所有工作，导致无法定位问题的源头</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/08/08/net_problem/" class="archive-article-date">
-  	<time datetime="2018-08-08T00:30:23.335Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-08</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/08/08/net_problem/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/08/03/solution/" class="archive-article-date">
-  	<time datetime="2018-08-03T09:19:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-03</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2018/08/03/solution/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">solution</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/08/03/solution/">solution</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/08/03/8-3/" class="archive-article-date">
-  	<time datetime="2018-08-03T03:35:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-03</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/08/03/8-3/">8.3</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/08/02/8-2/" class="archive-article-date">
-  	<time datetime="2018-08-02T06:55:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/08/02/8-2/">8.2</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/08/01/8-1/" class="archive-article-date">
-  	<time datetime="2018-08-01T04:21:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/08/01/8-1/">8.1</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/29/dva/" class="archive-article-date">
-  	<time datetime="2018-07-29T15:41:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-29</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/29/dva/">dva</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/29/redux-demo/" class="archive-article-date">
-  	<time datetime="2018-07-29T05:14:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-29</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/29/redux-demo/">redux-demo</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/27/react-demo/" class="archive-article-date">
-  	<time datetime="2018-07-27T08:45:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-27</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/27/react-demo/">react-demo</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/06/04/note/" class="archive-article-date">
-  	<time datetime="2018-06-04T12:00:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-04</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/06/04/note/">note</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/05/28/js事件机制/" class="archive-article-date">
-  	<time datetime="2018-05-28T13:29:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-28</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/05/28/js事件机制/">js事件机制</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="extend next" rel="next" href="/archives/page/2/">Next &raquo;</a>
-    </nav>
   
 
 
@@ -472,8 +319,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

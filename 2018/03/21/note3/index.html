@@ -6,18 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | hw</title>
+  <title>note3 | hw</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="大连理工大学本科2019届，现从事web前端开发">
-<meta property="og:type" content="website">
-<meta property="og:title" content="hw">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+  <meta name="description" content="常用模块cllectionsnamedtuple创建自定义数据类型，具有tuple的不变性，又可以根据属性引用123Apple = namedtuple(&amp;apos;Apple&amp;apos;,[&amp;apos;shape&amp;apos;,&amp;apos;taste&amp;apos;])a = Apple(&amp;apos;spherical&amp;apos;,&amp;apos;sweet&amp;apos;)a.shape deque1234">
+<meta name="keywords" content="python">
+<meta property="og:type" content="article">
+<meta property="og:title" content="note3">
+<meta property="og:url" content="http://yoursite.com/2018/03/21/note3/index.html">
 <meta property="og:site_name" content="hw">
-<meta property="og:description" content="大连理工大学本科2019届，现从事web前端开发">
+<meta property="og:description" content="常用模块cllectionsnamedtuple创建自定义数据类型，具有tuple的不变性，又可以根据属性引用123Apple = namedtuple(&amp;apos;Apple&amp;apos;,[&amp;apos;shape&amp;apos;,&amp;apos;taste&amp;apos;])a = Apple(&amp;apos;spherical&amp;apos;,&amp;apos;sweet&amp;apos;)a.shape deque1234">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-08-08T00:30:23.450Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="hw">
-<meta name="twitter:description" content="大连理工大学本科2019届，现从事web前端开发">
+<meta name="twitter:title" content="note3">
+<meta name="twitter:description" content="常用模块cllectionsnamedtuple创建自定义数据类型，具有tuple的不变性，又可以根据属性引用123Apple = namedtuple(&amp;apos;Apple&amp;apos;,[&amp;apos;shape&amp;apos;,&amp;apos;taste&amp;apos;])a = Apple(&amp;apos;spherical&amp;apos;,&amp;apos;sweet&amp;apos;)a.shape deque1234">
   
     <link rel="alternative" href="/atom.xml" title="hw" type="application/atom+xml">
   
@@ -155,300 +157,187 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-note3" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      note3
+    </h1>
+  
+
+        
+        <a href="/2018/03/21/note3/" class="archive-article-date">
+  	<time datetime="2018-03-20T23:36:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-21</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="常用模块"><a href="#常用模块" class="headerlink" title="常用模块"></a>常用模块</h2><h3 id="cllections"><a href="#cllections" class="headerlink" title="cllections"></a>cllections</h3><h4 id="namedtuple"><a href="#namedtuple" class="headerlink" title="namedtuple"></a>namedtuple</h4><p>创建自定义数据类型，具有tuple的不变性，又可以根据属性引用<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Apple = namedtuple(&apos;Apple&apos;,[&apos;shape&apos;,&apos;taste&apos;])</span><br><span class="line">a = Apple(&apos;spherical&apos;,&apos;sweet&apos;)</span><br><span class="line">a.shape</span><br></pre></td></tr></table></figure></p>
+<h4 id="deque"><a href="#deque" class="headerlink" title="deque"></a>deque</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; from collections import deque</span><br><span class="line">&gt;&gt;&gt; q = deque([&apos;a&apos;, &apos;b&apos;, &apos;c&apos;])</span><br><span class="line">&gt;&gt;&gt; q.append(&apos;x&apos;)</span><br><span class="line">&gt;&gt;&gt; q.appendleft(&apos;y&apos;)</span><br><span class="line">&gt;&gt;&gt; q</span><br><span class="line">deque([&apos;y&apos;, &apos;a&apos;, &apos;b&apos;, &apos;c&apos;, &apos;x&apos;])</span><br></pre></td></tr></table></figure>
+<p>####defaultdict<br>使用dict时，如引用不存在的key值时，不抛出KeyError返回默认值<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">from collections import defaultdict</span><br><span class="line">MyDic = defaultdict(lambda:&apos;N/A&apos;)</span><br><span class="line">MyDic[&apos;key1&apos;] = 2</span><br><span class="line">MyDic[&apos;key2&apos;]</span><br></pre></td></tr></table></figure></p>
+<p>####OrderedDict<br>迭代字典时，按照插入顺序排列<br>odict = OrderedDict()<br>odict[‘s’]=1<br>odict[‘a’]=2<br>odict[‘e’]=3<br>list(od.key())<br>[‘s’,’a’,’e’]</p>
+<p>####Counter<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">from collections import Counter</span><br><span class="line">c=Counter()</span><br><span class="line">for ch in &apos;programming&apos;</span><br><span class="line">    c[ch] = c[ch]+1</span><br><span class="line">c</span><br><span class="line">Counter(&#123;&apos;g&apos;: 2, &apos;m&apos;: 2, &apos;r&apos;: 2, &apos;a&apos;: 1, &apos;i&apos;: 1, &apos;o&apos;: 1, &apos;n&apos;: 1, &apos;p&apos;: 1&#125;)</span><br></pre></td></tr></table></figure></p>
+<p>###base64<br>3<em>8 = 4</em>6  2^6=64<br>base64.b64encode(b’’)#不足3的倍数用’\x00’补齐<br>base64.b64decode(b’’)#补了几个字节就在末尾加上几个’=’<br>因为URL中不出现’+’’/‘,转换为’-‘’_’<br>base64.urlsafe_b64encode(b’’)<br>base64.urlsafe_b64decode(b’’)</p>
+<p>###struct<br>处理字节<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; import struct</span><br><span class="line">&gt;&gt;&gt; struct.pack(&apos;&gt;I&apos;, 10240099)</span><br><span class="line">b&apos;\x00\x9c@c&apos;</span><br><span class="line"># &gt; 表示字节顺序是大端存储,I表示4字节无符号整数,H表示2字节无符号整数</span><br><span class="line">&gt;&gt;&gt; struct.unpack(&apos;&gt;IH&apos;, b&apos;\xf0\xf0\xf0\xf0\x80\x80&apos;)</span><br><span class="line">(4042322160, 32896)</span><br></pre></td></tr></table></figure></p>
+<p>###hashlib<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">MD5,SHA1</span><br><span class="line">import hashlib</span><br><span class="line">md5 = hashlib.md5()</span><br><span class="line">md5.update(&apos;how to speak English?&apos;.encode(&apos;utf-8&apos;))</span><br><span class="line">print(md5.hexdigest())</span><br></pre></td></tr></table></figure></p>
+<p>###hmac<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">import hmac</span><br><span class="line">message = b&apos;hello,world&apos;</span><br><span class="line">key = b&apos;secret&apos;</span><br><span class="line">#key,message都是bytes类型</span><br><span class="line">h = hmac.new(key,message,digestmod=&apos;MD5&apos;)</span><br><span class="line">h.hexdigest()</span><br></pre></td></tr></table></figure></p>
+<p>###itertools<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">import itertools</span><br><span class="line">itertools.count(1,2)#1,3,5,7...</span><br><span class="line">itertools.cycle([1,-1])#1,-1,1,-1</span><br><span class="line">itertools.repeat(&apos;a&apos;,3)</span><br><span class="line">itertools.takewhile(lambda x : x&lt;10,List)</span><br><span class="line">0 1 2 1 0</span><br><span class="line">&gt;&gt;&gt; for key, group in itertools.groupby(&apos;AAABBBCCAAA&apos;):</span><br><span class="line">...     print(key, list(group))</span><br><span class="line">...</span><br><span class="line">A [&apos;A&apos;, &apos;A&apos;, &apos;A&apos;]</span><br><span class="line">B [&apos;B&apos;, &apos;B&apos;, &apos;B&apos;]</span><br><span class="line">C [&apos;C&apos;, &apos;C&apos;]</span><br><span class="line">A [&apos;A&apos;, &apos;A&apos;, &apos;A&apos;]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt; for key, group in itertools.groupby(&apos;AaaBBbcCAAa&apos;, lambda c: c.upper()):</span><br><span class="line">...     print(key, list(group))</span><br><span class="line">...</span><br><span class="line">A [&apos;A&apos;, &apos;a&apos;, &apos;a&apos;]</span><br><span class="line">B [&apos;B&apos;, &apos;B&apos;, &apos;b&apos;]</span><br><span class="line">C [&apos;c&apos;, &apos;C&apos;]</span><br><span class="line">A [&apos;A&apos;, &apos;A&apos;, &apos;a&apos;]</span><br></pre></td></tr></table></figure></p>
+<p>###contexttlib<br>一个上下文管理的对象(实现了<strong>enter</strong>(),<strong>exit</strong>(type,value,traceback)<strong>):<br>with object as var:<br>    statement<br>进入with时调用</strong>enter__()且将返回值传给var,离开后调用<strong>exit</strong>,未发生异常时的参数置为None,返回True,反之传出异常,返回False<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">from contextlib import contextmanager</span><br><span class="line"></span><br><span class="line">class Query(object):</span><br><span class="line"></span><br><span class="line">    def __init__(self, name):</span><br><span class="line">        self.name = name</span><br><span class="line"></span><br><span class="line">    def query(self):</span><br><span class="line">        print(&apos;Query info about %s...&apos; % self.name)</span><br><span class="line"></span><br><span class="line">@contextmanager</span><br><span class="line">def create_query(name):</span><br><span class="line">    print(&apos;Begin&apos;)</span><br><span class="line">    q = Query(name)</span><br><span class="line">    yield q</span><br><span class="line">    print(&apos;End&apos;)</span><br></pre></td></tr></table></figure></p>
+<p>yield的值用做__enter()<strong>返回值，执行yield之后的语句调用   \</strong>exit()__<br><strong>@closing</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">from contextlib import closing</span><br><span class="line">from urllib.request import urlopen</span><br><span class="line"></span><br><span class="line">with closing(urlopen(&apos;https://www.python.org&apos;)) as page:</span><br><span class="line">    for line in page:</span><br><span class="line">        print(line)</span><br><span class="line">closing也是一个经过@contextmanager装饰的generator，这个generator编写起来其实非常简单：</span><br><span class="line"></span><br><span class="line">@contextmanager</span><br><span class="line">def closing(thing):</span><br><span class="line">    try:</span><br><span class="line">        yield thing</span><br><span class="line">    finally:</span><br><span class="line">        thing.close()</span><br></pre></td></tr></table></figure></p>
+<p><strong>urllib</strong> 浏览器请求</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/08/08/net_problem/" class="archive-article-date">
-  	<time datetime="2018-08-08T00:30:23.335Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-08</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/08/03/solution/" class="archive-article-date">
-  	<time datetime="2018-08-03T09:19:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-03</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/08/03/solution/">solution</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/08/03/8-3/" class="archive-article-date">
-  	<time datetime="2018-08-03T03:35:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-03</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/08/03/8-3/">8.3</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/08/02/8-2/" class="archive-article-date">
-  	<time datetime="2018-08-02T06:55:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/08/02/8-2/">8.2</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/08/01/8-1/" class="archive-article-date">
-  	<time datetime="2018-08-01T04:21:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/08/01/8-1/">8.1</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/03/21/note3/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/29/dva/" class="archive-article-date">
-  	<time datetime="2018-07-29T15:41:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-29</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2018/05/25/summary/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          summary
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/03/20/note2/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">note2</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/29/dva/">dva</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/29/redux-demo/" class="archive-article-date">
-  	<time datetime="2018-07-29T05:14:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-29</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/29/redux-demo/">redux-demo</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/27/react-demo/" class="archive-article-date">
-  	<time datetime="2018-07-27T08:45:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-27</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/27/react-demo/">react-demo</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/06/04/note/" class="archive-article-date">
-  	<time datetime="2018-06-04T12:00:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-04</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/06/04/note/">note</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/05/28/js事件机制/" class="archive-article-date">
-  	<time datetime="2018-05-28T13:29:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-28</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/05/28/js事件机制/">js事件机制</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="extend next" rel="next" href="/archives/page/2/">Next &raquo;</a>
-    </nav>
   
 
 
@@ -472,8 +361,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

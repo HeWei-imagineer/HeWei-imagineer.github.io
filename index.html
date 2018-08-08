@@ -157,6 +157,60 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-net_problem" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<p>title: 无线连接问题<br>date: 2017-12-08 21:26:50</p>
+<h2 id="tags-jottings"><a href="#tags-jottings" class="headerlink" title="tags: jottings"></a>tags: jottings</h2><h4 id="1-29-网页无法打开"><a href="#1-29-网页无法打开" class="headerlink" title="1.29 网页无法打开"></a>1.29 网页无法打开</h4><p>在这里就不得不吐槽一下了，从一月初发现自己笔记本域名解析出现问题，具体表现为：网页无法打开，但是qq等应用程序可以正常使用；怀疑是本地域名服务器出现了问题，按这个思路找了很多解决办法未果。之后又发现连接校园网的时候出现这个问题，但是连接手机热点却能正常访问网页，于是怀疑是校园网的原因。尝试多种解决办法无果后，借着自己手机流量多(就是懒)，便把问题搁置了。1.19回家之后就开始练车，到今天再次用电脑时，发现连家里的WiFi还是有同样问题。最后，这条命令：<br><strong>netsh winsock reset</strong><br>解决了这个磨人的问题。说是windows网络编程的接口是winsock,可能是安装软件的时候winsock的目录被修改，导致网络配置出错。即winsock与网络连接传输信息时参数被修改，导致无法发出正确请求无法获得正确响应。<br>综上：<br>问题：<br>1.笔记本无法打开网页，例如qq等的应用可以正常使用<br>2.该问题出现在笔记本链接WiFi时，当笔记本连接手机热点时问题消失<br>解决办法：<br>netsh winsock reset<br>我的看法：winsock是应用层协议，连接手机热点发出的包协议头部与连接wifi发出的包不同，当其目录被修改时导致接包方解析出错。</p>
+<p>####3.4<br>续问题，电脑再次连接校园网出现问题。网页无法打开，qq正常运行。网络诊断dns服务器未检测到。当前域名服务器为8.8.8.8，Google可正常搜索，搜索到的内容也无法打开</p>
+<p>####3.5<br>只支持有线网络上网</p>
+<p>####3.15<br>学校限制外部DNS(之前因为域名服务器有问题，自己手动改过DNS)，导致无法连接上网。改为DNS服务器自动获取后，成功连上DLUT！！！这两天一直呆实验室或者机房，靠网线上网。。。<br>解决方法：因为实验室搭网线，来了一个小哥，他帮我瞬间能弄好的，简直无敌感谢他！<br>我的诟病：<br>    1.想法里有过正确的解决方式，但是因为暂时不可达性导致错过<br>    2.有问题不及时解决，不到非不得已就一直拖着<br>    3.缺少和别人的交流，模糊了互相帮助和有偿服务的界限<br>    4.对自己和别人的评价不能恰如其分<br>总之，大部分人的价值是在被别的人需要中体现的，所以乐于去帮助别人，也学会适当的寻求别人的帮助，不是一个人单枪匹马就叫英雄，你在群体中成长会更迅速。还有，排除了一切不可能，那么唯一剩下的这个可能性就是结果。不要再在事实面前自我迷惑了。</p>
+<p>一旦出现错误，就开始怀疑自己所有工作，导致无法定位问题的源头</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/08/08/net_problem/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-solution" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -641,34 +695,38 @@
 
 
   
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-note" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/03/hello-world/">Hello World</a>
+      <a class="article-title" href="/2018/06/04/note/">note</a>
     </h1>
   
 
         
-        <a href="/2018/07/03/hello-world/" class="archive-article-date">
-  	<time datetime="2018-07-03T15:49:38.670Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-03</time>
+        <a href="/2018/06/04/note/" class="archive-article-date">
+  	<time datetime="2018-06-04T12:00:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-04</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-        
-          <a class="article-more-a" href="/2018/07/03/hello-world/#more">more >></a>
-        
+        <h1 id="Form"><a href="#Form" class="headerlink" title="Form"></a>Form</h1><p>Get vs Post : </p>
+<ol>
+<li>get put data in url; post: put data in https body (it can modified data)</li>
+</ol>
+<p><code>&lt;input name=&quot;&quot; placeholder=&quot;&quot; autofocus=&quot;&quot;&gt;:</code><br>‘name’ is the key of send message</p>
+<h1 id="URL编码规范"><a href="#URL编码规范" class="headerlink" title="URL编码规范"></a>URL编码规范</h1><p>转义:  ! =&gt; 21%</p>
+<h1 id="HTTP-method"><a href="#HTTP-method" class="headerlink" title="HTTP method"></a>HTTP method</h1><p>why, why is there http method</p>
+<p>I want to buid a website to record my life.<br>It more than a normal web page, but there are some interstinf part.</p>
+<ol>
+<li></li>
+</ol>
+
       
 
       
@@ -680,7 +738,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/03/hello-world/">展开全文 >></a>
+          <a class="article-more-a" href="/2018/06/04/note/">展开全文 >></a>
         </p>
       
 
@@ -710,6 +768,78 @@
 
 
   
+    <article id="post-js事件机制" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/05/28/js事件机制/">js事件机制</a>
+    </h1>
+  
+
+        
+        <a href="/2018/05/28/js事件机制/" class="archive-article-date">
+  	<time datetime="2018-05-28T13:29:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-28</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>已知</p>
+<ol>
+<li>事件定义，监听</li>
+<li>事件封装，触发<br>未知</li>
+<li>如何定义当前target</li>
+</ol>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/05/28/js事件机制/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+  
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+    </nav>
   
 
 
@@ -800,6 +930,22 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">notes</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">thoughts</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">pyhton</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">python</a>
               </li>
             
             <div class="clearfix"></div>
