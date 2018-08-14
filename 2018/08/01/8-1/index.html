@@ -8,18 +8,17 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>8.1 | hw</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="js 函数柯里化call apply bindapply: function.call(thisArg, [arg1, arg2, …]) 传数组参数call: function.call(thisArg, arg1, arg2, …)    传单个参数bind: function.call(thisArg, arg1, arg2, …)    不改变原函数，返回一个新函数 let curring">
-<meta name="keywords" content="随笔">
+  <meta name="description" content="js 函数柯里化call apply bindapply: function.call(thisArg, [arg1, arg2, …]) 传数组参数call: function.call(thisArg, arg1, arg2, …)    传单个参数bind: function.call(thisArg, arg1, arg2, …)    不改变原函数，返回一个新函数">
 <meta property="og:type" content="article">
 <meta property="og:title" content="8.1">
 <meta property="og:url" content="http://yoursite.com/2018/08/01/8-1/index.html">
 <meta property="og:site_name" content="hw">
-<meta property="og:description" content="js 函数柯里化call apply bindapply: function.call(thisArg, [arg1, arg2, …]) 传数组参数call: function.call(thisArg, arg1, arg2, …)    传单个参数bind: function.call(thisArg, arg1, arg2, …)    不改变原函数，返回一个新函数 let curring">
+<meta property="og:description" content="js 函数柯里化call apply bindapply: function.call(thisArg, [arg1, arg2, …]) 传数组参数call: function.call(thisArg, arg1, arg2, …)    传单个参数bind: function.call(thisArg, arg1, arg2, …)    不改变原函数，返回一个新函数">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-08-07T10:35:00.124Z">
+<meta property="og:updated_time" content="2018-08-08T02:07:37.235Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="8.1">
-<meta name="twitter:description" content="js 函数柯里化call apply bindapply: function.call(thisArg, [arg1, arg2, …]) 传数组参数call: function.call(thisArg, arg1, arg2, …)    传单个参数bind: function.call(thisArg, arg1, arg2, …)    不改变原函数，返回一个新函数 let curring">
+<meta name="twitter:description" content="js 函数柯里化call apply bindapply: function.call(thisArg, [arg1, arg2, …]) 传数组参数call: function.call(thisArg, arg1, arg2, …)    传单个参数bind: function.call(thisArg, arg1, arg2, …)    不改变原函数，返回一个新函数">
   
     <link rel="alternative" href="/atom.xml" title="hw" type="application/atom+xml">
   
@@ -86,7 +85,7 @@
 		        
 					<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
 		        
-					<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
+					<a class="rss" target="_blank" href="/atom.xml" title="rss"><i class="icon-rss"></i></a>
 		        
 					<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
 		        
@@ -129,7 +128,7 @@
 			        
 						<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
 			        
-						<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
+						<a class="rss" target="_blank" href="/atom.xml" title="rss"><i class="icon-rss"></i></a>
 			        
 						<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
 			        
@@ -178,8 +177,8 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h1 id="js-函数柯里化"><a href="#js-函数柯里化" class="headerlink" title="js 函数柯里化"></a>js 函数柯里化</h1><p>call apply bind<br>apply: function.call(thisArg, [arg1, arg2, …]) 传数组参数<br>call: function.call(thisArg, arg1, arg2, …)    传单个参数<br>bind: function.call(thisArg, arg1, arg2, …)    不改变原函数，返回一个新函数</p>
-<p>let curring = function f(a) {<br>                return f1 (b) {<br>                    return f2 (c) {<br>                        return f3 (d)<br>                    }<br>                }<br>            }<br>so I can use this by this way:</p>
 <a id="more"></a>
+<p>let curring = function f(a) {<br>                return f1 (b) {<br>                    return f2 (c) {<br>                        return f3 (d)<br>                    }<br>                }<br>            }<br>so I can use this by this way:</p>
 <p>let B = curring(a)<br>let C = B(b)<br>let D = C(c)<br>let result = D(d)<br>就像是函数装饰器一样，为一个简单的函数增加了很多处理。也可以用箭头函数表示：<br>    let add = a =&gt; b =&gt; a + b<br>    var add3 = add(3)<br>    add3(4) === 3 + 4 //true</p>
 
       
@@ -210,17 +209,6 @@
     <div class="article-info article-info-index">
       
       
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
       
 
       
@@ -342,7 +330,7 @@
     		&copy; 2018 hw
     	</div>
       	<div class="footer-right">
-      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a>
       	</div>
     </div>
   </div>
@@ -416,6 +404,26 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">实习</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">thoughts</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">notes</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">pyhton</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">python</a>
+              </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">随笔</a>

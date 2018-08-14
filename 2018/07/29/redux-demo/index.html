@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>redux-demo | hw</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="redux: 对于数据的一种管理方式如果数据来源不仅仅是与用户的交互还有网络端，各组件之间通信频繁，很多组件要访问同一个在变化的数据。这时候就应该建立起对数据统一的管理方式。不再让数据随意流。每一瞬间获取的state都是唯一的，规范化地处理函数(定义action，说明如何改变数据，即说明动作)，规范化地改变状态(通过connect和dispatch，完成数据与视图的绑定还有动作的触发)，但数据如何">
+  <meta name="description" content="redux: 对于数据的一种管理方式如果数据来源不仅仅是与用户的交互还有网络端，各组件之间通信频繁，很多组件要访问同一个在变化的数据。这时候就应该建立起对数据统一的管理方式。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="redux-demo">
 <meta property="og:url" content="http://yoursite.com/2018/07/29/redux-demo/index.html">
 <meta property="og:site_name" content="hw">
-<meta property="og:description" content="redux: 对于数据的一种管理方式如果数据来源不仅仅是与用户的交互还有网络端，各组件之间通信频繁，很多组件要访问同一个在变化的数据。这时候就应该建立起对数据统一的管理方式。不再让数据随意流。每一瞬间获取的state都是唯一的，规范化地处理函数(定义action，说明如何改变数据，即说明动作)，规范化地改变状态(通过connect和dispatch，完成数据与视图的绑定还有动作的触发)，但数据如何">
+<meta property="og:description" content="redux: 对于数据的一种管理方式如果数据来源不仅仅是与用户的交互还有网络端，各组件之间通信频繁，很多组件要访问同一个在变化的数据。这时候就应该建立起对数据统一的管理方式。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-08-07T10:37:10.777Z">
+<meta property="og:updated_time" content="2018-08-08T01:44:24.676Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="redux-demo">
-<meta name="twitter:description" content="redux: 对于数据的一种管理方式如果数据来源不仅仅是与用户的交互还有网络端，各组件之间通信频繁，很多组件要访问同一个在变化的数据。这时候就应该建立起对数据统一的管理方式。不再让数据随意流。每一瞬间获取的state都是唯一的，规范化地处理函数(定义action，说明如何改变数据，即说明动作)，规范化地改变状态(通过connect和dispatch，完成数据与视图的绑定还有动作的触发)，但数据如何">
+<meta name="twitter:description" content="redux: 对于数据的一种管理方式如果数据来源不仅仅是与用户的交互还有网络端，各组件之间通信频繁，很多组件要访问同一个在变化的数据。这时候就应该建立起对数据统一的管理方式。">
   
     <link rel="alternative" href="/atom.xml" title="hw" type="application/atom+xml">
   
@@ -85,7 +85,7 @@
 		        
 					<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
 		        
-					<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
+					<a class="rss" target="_blank" href="/atom.xml" title="rss"><i class="icon-rss"></i></a>
 		        
 					<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
 		        
@@ -128,7 +128,7 @@
 			        
 						<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
 			        
-						<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
+						<a class="rss" target="_blank" href="/atom.xml" title="rss"><i class="icon-rss"></i></a>
 			        
 						<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
 			        
@@ -176,11 +176,13 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>redux: 对于数据的一种管理方式<br>如果数据来源不仅仅是与用户的交互还有网络端，各组件之间通信频繁，很多组件要访问同一个在变化的数据。这时候就应该建立起对数据统一的管理方式。<br>不再让数据随意流。每一瞬间获取的state都是唯一的，规范化地处理函数(定义action，说明如何改变数据，即说明动作)，规范化地改变状态(通过connect和dispatch，完成数据与视图的绑定还有动作的触发)，但数据如何绑定组件还是由开发者决定。<br>以下实例为点击按钮，将页面上的数字加1.<br>按照之前的步骤会这样建立程序：<br>数据处理handleData =&gt; 组件设计，页面布局,render函数的构建 =&gt; 决定在哪里setState以及从哪里拿数据。对比如下的例子：</p>
+        <p>redux: 对于数据的一种管理方式<br>如果数据来源不仅仅是与用户的交互还有网络端，各组件之间通信频繁，很多组件要访问同一个在变化的数据。这时候就应该建立起对数据统一的管理方式。</p>
+<a id="more"></a>
+<p>不再让数据随意流。每一瞬间获取的state都是唯一的，规范化地处理函数(定义action，说明如何改变数据，即说明动作)，规范化地改变状态(通过connect和dispatch，完成数据与视图的绑定还有动作的触发)，但数据如何绑定组件还是由开发者决定。<br>以下实例为点击按钮，将页面上的数字加1.<br>按照之前的步骤会这样建立程序：<br>数据处理handleData =&gt; 组件设计，页面布局,render函数的构建 =&gt; 决定在哪里setState以及从哪里拿数据。对比如下的例子：</p>
 <ol>
 <li>定义action，这是对数据处理的预说明；reducer，数据处理的方式 </li>
 </ol>
-<a id="more"></a>
+<!-- more -->
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">// action：定义type表示操作类型</span><br><span class="line">let counter = 0;</span><br><span class="line"></span><br><span class="line">export const Increment = () =&gt; (&#123;</span><br><span class="line">    type: &apos;ADD_ONE&apos;,</span><br><span class="line">    counter: counter++</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">export const newContent = text =&gt; (&#123;</span><br><span class="line">    type: &apos;NEW_CONTENT&apos;,</span><br><span class="line">    text: text</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">/* reducer可以使用combineReducers简化。把部分state的值传给reducer，子reducer可以返回默认值。每一部分的reducer只关注部分state的更新，处理每一个属性，合成，combineReducer来处理。combineReducer函数传入一个对象。&#123;state的一个值，值的名字：函数.&#125; 最后reducer return a object</span><br><span class="line">*/</span><br><span class="line"></span><br><span class="line">// 可以在reducer函数里定义state默认值</span><br><span class="line">function changeText(state=&apos;Hello,Echo&apos;, action) &#123;</span><br><span class="line">    switch (action.type) &#123;</span><br><span class="line">        case &apos;NEW_CONTENT&apos;:</span><br><span class="line">            return action.text;</span><br><span class="line">        default:</span><br><span class="line">            return state;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function counter(state=0, action) &#123;</span><br><span class="line">    switch (action.type) &#123;</span><br><span class="line">        case &apos;ADD_ONE&apos;:</span><br><span class="line">            return action.counter;</span><br><span class="line">        default:</span><br><span class="line">            return state;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// &#123;state的一个值，值的名字：函数.&#125;，当属性值与reducer函数名相同时，可以简写为&#123;text, counter&#125;</span><br><span class="line">const App = combineReducers(&#123;</span><br><span class="line">    text: changeText,</span><br><span class="line">    counter: counter</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 <ol start="2">
 <li>定义组件，这里有纯组件和容器组件。纯组件只负责展示，容器组件会绑定数据，这里就是react和redux的结合。</li>
@@ -338,7 +340,7 @@
     		&copy; 2018 hw
     	</div>
       	<div class="footer-right">
-      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a>
       	</div>
     </div>
   </div>
@@ -412,6 +414,26 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">实习</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">thoughts</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">notes</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">pyhton</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">python</a>
+              </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">随笔</a>
